@@ -57,46 +57,85 @@ const NAV_ITEMS = [
 
 const PRODUCTS = [
   {
-    id: "01",
-    category: "Приборы учёта",
-    title: "Счётчики воды",
-    desc: "Крыльчатые и турбинные счётчики холодной и горячей воды. DN 15–250. Классы точности A, B, C.",
+    id: "CW-Ultra",
+    category: "Учёт воды",
+    title: "CW-Ultra DN15–50",
+    desc: "Ультразвуковой счётчик холодной/горячей воды. Диапазон DN 15–50. Класс точности 2 (R800). Ресурс батареи — 16 лет. Протоколы: M-Bus, LoRa, NB-IoT опция.",
+    specs: ["DN 15–50", "Класс R800 (C)", "Батарея 16 лет", "M-Bus / LoRa"],
     tag: "Новинка",
+    icon: "Droplets",
   },
   {
-    id: "02",
-    category: "Передача данных",
-    title: "Модемы NB-IoT / GSM",
-    desc: "Беспроводные модули передачи данных с поддержкой протоколов MQTT, DLMS/COSEM, ModBus.",
+    id: "CW-Pro",
+    category: "Учёт воды",
+    title: "CW-Pro DN50–250",
+    desc: "Электромагнитный счётчик для коммерческого учёта холодной воды. DN 50–250. Погрешность ±0,5%. Защита IP68. Подходит для затопляемых колодцев.",
+    specs: ["DN 50–250", "±0,5% точность", "IP68", "RS-485 / Modbus"],
     tag: "Хит",
+    icon: "Waves",
   },
   {
-    id: "03",
-    category: "Тепловой учёт",
-    title: "Теплосчётчики",
-    desc: "Ультразвуковые и вихревые теплосчётчики для коммерческого и квартирного учёта тепловой энергии.",
+    id: "CH-Compact",
+    category: "Учёт тепла",
+    title: "CH-Compact",
+    desc: "Компактный ультразвуковой теплосчётчик для квартирного и коммерческого учёта. DN 15–32. Встроенный M-Bus. Внесён в Госреестр СИ.",
+    specs: ["DN 15–32", "Класс 2", "M-Bus встроен", "Госреестр СИ"],
     tag: "",
+    icon: "Flame",
   },
   {
-    id: "04",
+    id: "CH-Magnum",
+    category: "Учёт тепла",
+    title: "CH-Magnum DN32–200",
+    desc: "Промышленный ультразвуковой теплосчётчик для ИТП и котельных. DN 32–200. Погрешность ±0,5%. Вычислитель с архивом 12 месяцев. HART, RS-485.",
+    specs: ["DN 32–200", "±0,5%", "12 мес архив", "HART / RS-485"],
+    tag: "",
+    icon: "Thermometer",
+  },
+  {
+    id: "GS-Membrane",
+    category: "Учёт газа",
+    title: "GS-M G4–G25",
+    desc: "Мембранный счётчик газа для коммунального и промышленного учёта. Типоразмеры G4, G6, G10, G16, G25. Класс точности 1,5%. Температурная коррекция (опция).",
+    specs: ["G4–G25", "Класс 1,5%", "Температурная коррекция", "Импульсный выход"],
+    tag: "",
+    icon: "Wind",
+  },
+  {
+    id: "ES-Smart",
+    category: "Учёт электроэнергии",
+    title: "ES-Smart 1Ф / 3Ф",
+    desc: "Многотарифный АСКУЭ-счётчик электроэнергии. 1-фазный (5–60А) и 3-фазный (5–100А). Тарифов до 8. Интерфейсы RS-485, PLC G3-Prime, оптопорт.",
+    specs: ["До 8 тарифов", "RS-485 / PLC", "Класс 1.0 / 0.5S", "СОРМ-3"],
+    tag: "",
+    icon: "Zap",
+  },
+  {
+    id: "MDM-NB",
+    category: "Передача данных",
+    title: "MDM-NB (NB-IoT / LTE-M)",
+    desc: "Беспроводной модем для дистанционного снятия показаний. Поддержка NB-IoT и LTE-M. Протоколы MQTT, DLMS/COSEM. Батарейное питание до 10 лет. IP67.",
+    specs: ["NB-IoT / LTE-M", "MQTT / DLMS", "Батарея 10 лет", "IP67"],
+    tag: "Хит",
+    icon: "Radio",
+  },
+  {
+    id: "MDM-GSM",
+    category: "Передача данных",
+    title: "MDM-RS (RS-485 / GSM)",
+    desc: "Проводной модем-концентратор с GSM каналом. До 16 устройств на шине RS-485. Совместим с приборами любых производителей. Din-рейка. Питание 220В.",
+    specs: ["До 16 устройств", "RS-485 / GSM", "Din-рейка", "Любые протоколы"],
+    tag: "",
+    icon: "Cpu",
+  },
+  {
+    id: "SW-Dispatch",
     category: "Программное обеспечение",
-    title: "АСКУЭ / Диспетчеризация",
-    desc: "Система сбора и обработки данных со счётчиков. Веб-интерфейс, мобильное приложение, API.",
+    title: "Chronos SCADA",
+    desc: "Платформа диспетчеризации и визуализации данных со всех типов счётчиков. Веб-интерфейс, мобильное приложение, REST API. Поддержка облака и on-premise.",
+    specs: ["Веб + мобильное", "REST API", "Облако / On-premise", "ГИС ЖКХ интеграция"],
     tag: "Популярно",
-  },
-  {
-    id: "05",
-    category: "Газовый учёт",
-    title: "Счётчики газа",
-    desc: "Мембранные и ультразвуковые газовые счётчики G1,6–G650. Класс точности 1,5%.",
-    tag: "",
-  },
-  {
-    id: "06",
-    category: "Электроэнергия",
-    title: "Электросчётчики",
-    desc: "Многотарифные счётчики электроэнергии 1- и 3-фазные. АСКУЭ-совместимые с интерфейсами RS-485, PLC.",
-    tag: "",
+    icon: "Monitor",
   },
 ];
 
@@ -361,7 +400,12 @@ function HeroSection() {
   );
 }
 
+const TABS = ["Все", "Учёт воды", "Учёт тепла", "Учёт газа", "Учёт электроэнергии", "Передача данных", "Программное обеспечение"];
+
 function ProductsSection() {
+  const [activeTab, setActiveTab] = useState("Все");
+  const filtered = activeTab === "Все" ? PRODUCTS : PRODUCTS.filter((p) => p.category === activeTab);
+
   return (
     <section id="products" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -377,33 +421,48 @@ function ProductsSection() {
 
         {/* Category tabs */}
         <div className="flex flex-wrap gap-2 mb-10">
-          {["Все", "Вода", "Тепло", "Газ", "Электроэнергия", "ПО", "Передача данных"].map((tab, i) => (
-            <button key={tab} className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${i === 0 ? "bg-[#1a3a6b] text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}>
+          {TABS.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeTab === tab ? "bg-[#1a3a6b] text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
+            >
               {tab}
             </button>
           ))}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PRODUCTS.map((p) => (
-            <div key={p.id} className="product-card group border border-gray-200 rounded-xl overflow-hidden hover:border-[#1a3a6b] hover:shadow-lg transition-all">
-              <div className="h-52 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden relative flex items-center justify-center product-card-img">
-                <span className="text-8xl font-black text-gray-200 group-hover:text-[#1a3a6b]/20 transition-colors">{p.id}</span>
+          {filtered.map((p) => (
+            <div key={p.id} className="group border border-gray-200 rounded-xl overflow-hidden hover:border-[#1a3a6b] hover:shadow-lg transition-all flex flex-col">
+              {/* Card image area */}
+              <div className="h-44 bg-gradient-to-br from-[#0d2347] to-[#1a3a6b] relative flex flex-col items-center justify-center gap-2 px-6">
+                <Icon name={p.icon as string} size={52} className="text-white/30" />
+                <span className="text-white/80 font-mono text-xs tracking-widest uppercase">{p.id}</span>
                 {p.tag && (
                   <div className="absolute top-3 left-3 bg-[#e63329] text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">
                     {p.tag}
                   </div>
                 )}
               </div>
-              <div className="p-5">
+              {/* Card body */}
+              <div className="p-5 flex flex-col flex-1">
                 <div className="text-xs text-[#e63329] font-bold uppercase tracking-widest mb-1">{p.category}</div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{p.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">{p.desc}</p>
+                {/* Specs */}
+                <div className="flex flex-wrap gap-1.5 mb-5 mt-auto">
+                  {p.specs.map((spec) => (
+                    <span key={spec} className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full border border-gray-200">
+                      {spec}
+                    </span>
+                  ))}
+                </div>
                 <div className="flex gap-3">
                   <a href="#" className="flex-1 text-center bg-[#1a3a6b] text-white py-2 rounded text-sm font-medium hover:bg-[#0d2347] transition-colors">
                     Подробнее
                   </a>
-                  <a href="#" className="flex-1 text-center border border-[#1a3a6b] text-[#1a3a6b] py-2 rounded text-sm font-medium hover:bg-[#1a3a6b] hover:text-white transition-colors">
+                  <a href="#contact" className="flex-1 text-center border border-[#1a3a6b] text-[#1a3a6b] py-2 rounded text-sm font-medium hover:bg-[#1a3a6b] hover:text-white transition-colors">
                     Запросить КП
                   </a>
                 </div>
